@@ -625,6 +625,12 @@ we tried the ssh connection with wrong password which will run all of above resp
 
 - Challenges in tool integration and resolving API incompatibilities.
 - Troubleshooting network configurations and performance issues.
+- the main problem it was with MISP and integration with wazuh 
+  1. first problem there is poor documentaion that compatable with the updated versions 
+  2. we tried to install the MISP locally but alawys it damage the opearating system distrubution 
+  3. we find that we can do it with docker but still we needed to update a lot on the docker-compose.yaml file and on configuration  with docker DNS to build and up MISP
+  4. there are only documentaion to how to automat requesting from sysmon only (windows ) and our agent is linux how ever we tried with windows agent and did not work
+
 
 ### New Skills Acquired
 
