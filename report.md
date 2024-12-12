@@ -101,13 +101,13 @@
 
    - Configure Wazuh, install Wazuh Indexer, install Wazuh Server, and install Wazuh Dashboard.
 
-     ![alt text](image-1.png)
+     ![alt text](ScreenShots/image-1.png)
 
-     ![alt text](image-2.png)
+     ![alt text](ScreenShots/image-2.png)
 
    - Access the Wazuh web interface with `https://10.91.56.198:443` and my credentials:
 
-     ![alt text](image-3.png)
+     ![alt text](ScreenShots/image-3.png)
 
 2. Setup Wazuh Agent on Ubuntu 20.04 (Ali Device number two):
 
@@ -117,7 +117,7 @@
        curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | gpg --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/wazuh.gpg --import && chmod 644 /usr/share/keyrings/wazuh.gpg
      ```
 
-     ![alt text](image-4.png)
+     ![alt text](ScreenShots/image-4.png)
 
    - Add the repository:
 
@@ -125,7 +125,7 @@
        echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main" | tee -a /etc/apt/sources.list.d/wazuh.list
      ```
 
-     ![alt text](image-5.png)
+     ![alt text](ScreenShots/image-5.png)
 
    - Update the package information:
 
@@ -133,7 +133,7 @@
        sudo apt-get update
      ```
 
-     ![alt text](image-6.png)
+     ![alt text](ScreenShots/image-6.png)
 
    - Edit the WAZUH_MANAGER variable to contain our Wazuh manager IP address or hostname `10.91.56.198`:
 
@@ -141,7 +141,7 @@
        WAZUH_MANAGER="10.91.56.198" apt-get install wazuh-agent
      ```
 
-     ![alt text](image-7.png)
+     ![alt text](ScreenShots/image-7.png)
 
    - Enable and start the Wazuh agent service:
 
@@ -151,25 +151,25 @@
        systemctl start wazuh-agent
      ```
 
-     ![alt text](image-8.png)
+     ![alt text](ScreenShots/image-8.png)
 
 3. Setup IRIS on Ubuntu 22.04 (Ammar Device):
 
    - Setup Docker on the device:
 
-     ![alt text](image-10.png)
+     ![alt text](ScreenShots/image-10.png)
 
    - Intalling the IRIS on the device:
 
-     ![alt text](image-11.png)
+     ![alt text](ScreenShots/image-11.png)
 
    - After Installing, Access the web interface:
 
-     ![alt text](image-12.png)
+     ![alt text](ScreenShots/image-12.png)
 
    - Login and see the Dashboard of IRIS:
 
-     ![alt text](image-13.png)
+     ![alt text](ScreenShots/image-13.png)
 
 <!-- - Network architecture with diagrams showing relationships between components. -->
 <!-- https://nateuribe.tech/blog/foss-soc/ -->
@@ -180,7 +180,7 @@
 
   here you can see the connection between the Wazuh Server and Wazuh Agent:
 
-  ![alt text](image-9.png)
+  ![alt text](ScreenShots/image-9.png)
 
 - **AbusIPDB:** Integrated with Wazuh for threat intelligence enrichment.
 
@@ -193,10 +193,10 @@
   1. We add rules into var/ossec/etc/rules/local_rules.xml for
      trigger alert when using public ip and rules to accept the answer from AbusIPDB
      but we do it from the dashboard
-     ![](21.png)
+     ![](ScreenShots/21.png)
 
   2. we creat the custom-abuseipdb.py in ` /var/ossec/integrations/custom-abuseipdb.py`
-     ![](22.png)
+     ![](ScreenShots/22.png)
 
   ```
   #!/var/ossec/framework/python/bin/python3
@@ -391,8 +391,8 @@
   chown root:wazuh /var/ossec/integrations/custom-abuseipdb.py
   ```
 
-  ![](23.png)
-  ![](24.png)
+  ![](ScreenShots/23.png)
+  ![](ScreenShots/24.png)
 
   4. we ad the configureation /var/ossec/etc/ossec.conf
 
@@ -408,12 +408,12 @@
 
   > note i replaced <YOUR_ABUSEIPDB_API_KEY> with a valid one
 
-  ![](25.png)
+  ![](ScreenShots/25.png)
 
   5. now we restart the wazuh manager to apply the new configureation
      `systemctl restart wazuh-manager`
 
-  ![](26.png)
+  ![](ScreenShots/26.png)
 
   6. we test from the agent
      we add
@@ -426,11 +426,11 @@
   ```
 
   to the file `/var/log/test.log`
-  ![](27.png)
+  ![](ScreenShots/27.png)
 
   now we restart the agent
   `/var/ossec/bin/wazuh-control restart`
-  ![](28.png)
+  ![](ScreenShots/28.png)
 
     <br>
     now
@@ -443,10 +443,10 @@
 
   then Inject the log into `/var/log/test.log` to trigger the alert.
   `cat injector >> /var/log/test.log`
-  ![](29.png)
+  ![](ScreenShots/29.png)
 
   now lets check on the dashboard
-  ![](30.png)
+  ![](ScreenShots/30.png)
 
 - **IRIS:** Configured for case management and linked with Wazuh.
 
@@ -454,9 +454,9 @@
 
   - Copy the updated script to `custom-iris.py` to the directory `/var/ossec/integrations/custom-iris.py`, Sets permissions for the file so the owner can read, write, and execute, and Changes the ownership of the file to the user root and group wazuh.
 
-    ![alt text](image-14.png)
+    ![alt text](ScreenShots/image-14.png)
 
-    ![alt text](image_2024-12-05_22-52-50.png)
+    ![alt text](ScreenShots/image_2024-12-05_22-52-50.png)
 
   - Add the following snippet into the `/var/ossec/etc/ossec.conf` config file, Adjust `<hook_url>` and `<api_key>` to your environment, and change `<level>` to the desired threshold for alerts.
 
@@ -477,29 +477,29 @@
     <!-- ... Rest of config ... -->
     ```
 
-    ![alt text](image-15.png)
+    ![alt text](ScreenShots/image-15.png)
 
   - Restart the wazuh-manager service after making the above settings, and check the status:
 
-    ![alt text](image-16.png)
+    ![alt text](ScreenShots/image-16.png)
 
   - Now eveything configured from Wazuh server side and we need to check it on the IRIS side:
 
   - Navigate to the Advanced Settings in Iris, then Access Control Section:
 
-    ![alt text](image-17.png)
+    ![alt text](ScreenShots/image-17.png)
 
   - Locate Customers Management:
 
-    ![alt text](image-18.png)
+    ![alt text](ScreenShots/image-18.png)
 
   - Assign Wazuh Server to a Customer:
 
-    ![alt text](image-19.png)
+    ![alt text](ScreenShots/image-19.png)
 
   - Showing the alerts of thats coming from wazuh agent:
 
-    ![alt text](image-20.png)
+    ![alt text](ScreenShots/image-20.png)
 
 ### Testing Scenarios
 
@@ -523,20 +523,20 @@
    - Save the changes to ensure the case is linked to the chosen analyst.
 
    **Screenshot Evidence:**
-   ![alt text](image-23.png)
+   ![alt text](ScreenShots/image-23.png)
 
-   ![alt text](image-24.png)
+   ![alt text](ScreenShots/image-24.png)
 
-   ![alt text](image-25.png)
+   ![alt text](ScreenShots/image-25.png)
 
-   ![alt text](image-26.png)
+   ![alt text](ScreenShots/image-26.png)
 
-   ![alt text](image-27.png)
+   ![alt text](ScreenShots/image-27.png)
 
-   ![alt text](image-28.png)
+   ![alt text](ScreenShots/image-28.png)
 
    We generated a [report](https://github.com/Mohammed-Nour/NCS_Project/blob/main/analysis.docx) and added it to Github.
-   ![alt text](image-29.png)
+   ![alt text](ScreenShots/image-29.png)
 
 2. **Verification:**
    - The assigned analyst can view the case in their dashboard.
@@ -605,21 +605,21 @@
   </active-response>
   ```
 
-  ![alt text](image-21.png)
+  ![alt text](ScreenShots/image-21.png)
 
   After adding every active response to the file `/var/ossec/etc/ossec.conf`, then restart the wazuh manager we can test the actions after that :
 
-  ![alt text](image-22.png)
+  ![alt text](ScreenShots/image-22.png)
 
 4. **Testing the Active Responses:**
 
 we tried the ssh connection with wrong password which will run all of above responses:
 
-![alt text](image-30.png)
+![alt text](ScreenShots/image-30.png)
 
-![alt text](image-31.png)
+![alt text](ScreenShots/image-31.png)
 
-![alt text](image-32.png)
+![alt text](ScreenShots/image-32.png)
 
 ## 4. Difficulties Faced and New Skills Acquired
 
