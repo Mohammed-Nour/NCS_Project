@@ -122,4 +122,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-For detailed steps and implementation, refer to the [Project Documentation](https://github.com/Mohammed-Nour/NCS_Project/blob/main/report.pdf). For any queries, please contact the contributors listed in the documentation.
+For detailed steps and implementation, refer to the [Project Documentation](https://github.com/Mohammed-Nour/NCS_Project/blob/main/report.pdf) and the [Youtube demo](https://youtu.be/drFJSRPK0mQ). For any queries, please contact the contributors listed in the documentation.
