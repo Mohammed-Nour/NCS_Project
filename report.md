@@ -10,7 +10,7 @@
 
 ### Tasks and Responsibilities
 
-1. **Mohamad Nour Shahin:** Infrastructure Setup.
+1. **Mohamad Nour Shahin & Mohammad Jaafar:** Infrastructure Setup.
 
    - Set up the virtual environment for the SOC.
 
@@ -21,6 +21,8 @@
    - Create a basic incident dashboard in Wazuh for tracking events.
 
    - Ensure connectivity between Wazuh and other tools (e.g., AbusIPDB, IRIS).
+
+   - Writing the readme section and overall evaluation of contents and reports.
 
 2. **Yehia Sobeh:** Integration of AbusIPDB for threat intelligence.
 
@@ -533,7 +535,7 @@
 
    ![alt text](image-28.png)
 
-   We generated a report and add it to [Github link](https://github.com/Mohammed-Nour/NCS_Project/blob/main/analysis.docx).
+   We generated a [report](https://github.com/Mohammed-Nour/NCS_Project/blob/main/analysis.docx) and added it to Github.
    ![alt text](image-29.png)
 
 2. **Verification:**
