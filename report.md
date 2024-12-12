@@ -646,14 +646,31 @@ we tried the ssh connection with wrong password which will run all of above resp
 
 ### Conclusion
 
-- Evaluation of the SOC setup's effectiveness in detecting and responding to incidents.
-- Reflection on the strengths of the open-source tools used.
-- Acknowledgment of the limitations and areas for improvement.
+- **Effectiveness of the SOC Setup**:  
+  The implemented SOC demonstrated its ability to detect and respond to various security incidents, such as brute force attacks and malware infections. By integrating Wazuh with AbuseIPDB, the system leveraged enriched threat intelligence, while IRIS streamlined case management and escalation processes. The automation of responses enhanced operational efficiency and reduced reaction times.
+
+- **Strengths of the Tools Used**:  
+  The combination of Wazuh, AbuseIPDB, and IRIS showcased the potential of open-source tools to deliver robust and scalable solutions for security operations. Their flexibility, coupled with accessible documentation, allowed for seamless integration and configuration. Additionally, the cost-effectiveness of open-source software made it a practical choice for building a functional SOC.
+
+- **Areas for Improvement**:  
+  Despite its successes, the project revealed some limitations, including challenges with API compatibility, insufficient documentation for advanced integrations (e.g., MISP), and scalability concerns under heavy traffic loads. Addressing these issues would further enhance the system’s effectiveness and reliability.
 
 ### Recommendations
 
-- Suggestions for future work, such as adding more tools or refining workflows.
-- Potential use cases for scaling the solution in real-world scenarios.
+- **Enhance Existing Workflows**:  
+  Fine-tune alerting and response workflows to improve detection accuracy and minimize false positives. Adjust Wazuh rules and thresholds to better align with real-world scenarios and emerging threats.
+
+- **Expand the Toolset**:  
+  Integrate additional tools such as MISP for collaborative threat intelligence sharing or Elastic Stack for enhanced data visualization and analytics. These integrations would enrich the overall SOC ecosystem and provide deeper insights into security events.
+
+- **Prepare for Larger Deployments**:  
+  Evaluate the system’s performance in a high-traffic environment and make necessary adjustments to support scalability. This includes implementing redundancy for critical components and ensuring the infrastructure can handle increased demands.
+
+- **Develop Advanced Automation**:  
+  Design and test automated responses for more complex threats, such as lateral movement or data exfiltration attempts. Incorporating advanced automation would strengthen the SOC’s ability to respond rapidly to sophisticated attacks.
+
+- **Focus on Training and Documentation**:  
+  Create detailed training resources for SOC analysts, including step-by-step playbooks for managing common incident types. Strengthen internal documentation with troubleshooting guides and instructions for advanced configurations, ensuring easier adoption and maintenance of the system.
 
 ---
 
