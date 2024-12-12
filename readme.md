@@ -53,7 +53,7 @@ The objective of this project is to enhance the capabilities of detecting, analy
   - Scenarios for brute force attack simulation and response validation.
   - Logs and screenshots demonstrating successful implementation.
 - **Report**:
-  - [Project Analysis Report](https://github.com/Mohammed-Nour/NCS_Project/blob/main/analysis.docx).
+  - [Project Analysis Report](https://github.com/Mohammed-Nour/NCS_Project/blob/main/report.pdf).
 
 ---
 
@@ -68,10 +68,11 @@ The objective of this project is to enhance the capabilities of detecting, analy
 ### Installation
 
 1. **Wazuh Setup**:  
-   Follow the [official installation guide](https://wazuh.com/documentation/).
+   Follow the [official installation guide](https://documentation.wazuh.com/current/installation-guide/index.html).
 
 2. **AbuseIPDB Integration**:  
-   Refer to the [custom script and configuration steps](#integration-process).
+   Refer to the [AbuseIPDB Integration](/report.md#working-instances-of-tools).
+
 
 3. **IRIS Setup**:  
    Install and configure IRIS using Docker. See the [IRIS integration section](#integration-process).
