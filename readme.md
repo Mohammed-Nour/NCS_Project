@@ -75,7 +75,7 @@ The objective of this project is to enhance the capabilities of detecting, analy
 
 
 3. **IRIS Setup**:  
-   Install and configure IRIS using Docker. See the [IRIS integration section](#integration-process).
+   Install and configure IRIS using Docker. See the [IRIS integration section](/report.md#working-instances-of-tools).
 
 ---
 
@@ -122,4 +122,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-For detailed steps and implementation, refer to the [Project Documentation](https://github.com/Mohammed-Nour/NCS_Project/blob/main/analysis.docx). For any queries, please contact the contributors listed in the documentation.
+For detailed steps and implementation, refer to the [Project Documentation](https://github.com/Mohammed-Nour/NCS_Project/blob/main/report.pdf). For any queries, please contact the contributors listed in the documentation.
